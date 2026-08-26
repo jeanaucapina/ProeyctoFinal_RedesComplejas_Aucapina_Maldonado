@@ -25,6 +25,9 @@ python3 problema8.py    # Fase 4 — Percolación
 python3 problema9.py    # Fase 4 — Cascadas y SIR
 python3 problema10.py   # Fase 4 — Ranking de puntos críticos
 python3 problema11.py   # Fase 5 — Propuesta de rediseño
+
+# o, para correr los 11 en secuencia:
+python3 run_all.py
 ```
 
 Cada script se ejecuta de forma independiente (no hay dependencias de orden
@@ -32,7 +35,8 @@ entre ellos, salvo que todos parten del mismo `codigo_base/cargar_red.py`) y
 al final imprime "Todas las comprobaciones pasaron" al cargar la red — si no,
 revisar la instalación antes de continuar. Los scripts `comparar_layouts.py`
 y `comparar_betweenness_layouts.py` son auxiliares de visualización para P1/P2,
-no resuelven un ítem numerado por separado.
+no resuelven un ítem numerado por separado. `run_all.py` ejecuta los 11 problemas
+en orden con un único comando.
 
 **Tiempo de ejecución:** la mayoría de scripts corre en segundos. `problema7.py`
 tarda más porque, además de la heurística voraz, resuelve el óptimo exacto de
@@ -45,7 +49,12 @@ cada una, del orden de 1 minuto.
 
 - `results/tablas/` — CSV y TXT con las tablas numéricas de cada problema.
 - `results/imagenes/` — todas las figuras (PNG, 150–180 dpi) referenciadas en `Informe.md`.
+- `results/graphdata.json` — grafo exportado (nodos/aristas) para la visualización interactiva de `presentacion.html`.
+- `results/redesign.json` — topología de la propuesta de rediseño (P11).
 - `Informe.md` — informe completo (definiciones, resultados, análisis) por fase y problema; es la fuente de la que se genera `informe_latex/informe.pdf`.
+- `informe_latex/` — proyecto LaTeX (`informe.tex`, `template.tex`, `images/`) usado para compilar `informe.pdf`.
+- `informe.pdf` — informe final compilado.
+- `presentacion.html` — presentación/demo interactiva de resultados, autocontenida (abrir directo en el navegador).
 
 ## Dependencias
 
